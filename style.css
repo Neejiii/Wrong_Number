@@ -1,0 +1,123 @@
+::before, 
+::after{
+    box-sizing: border-box; 
+    font-family: Gotham Rounded, sans-serif; 
+    font-weight: normal;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #59ecff, #e57dff);
+    
+}
+.btn {
+    position: absolute;
+    top: 500px;
+    left: 560px;
+    font-size: 60px;
+    line-height:60px;
+    border-radius: 13px;
+    color: rgb(80, 75, 107);
+    transition: .25s linear;
+    background: #f17efc;
+    border: none;
+    font-family: 'Kanit', sans-serif;
+}
+.btn:hover {
+    box-shadow: 0 0 0 10px rgb(111, 231, 252), 0 0 0 8px #ff8fe7;
+}
+
+.hover {
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
+}
+
+.hover:hover {
+    -webkit-transform: rotateZ(5deg);
+    -ms-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 90px);
+    font-family: 'Kanit', sans-serif;
+}
+.calculator-grid>button{
+    cursor: pointer;
+    font-size: 2rem; 
+    border: 1px solid rgb(206, 218, 253); 
+    outline: none; 
+    background-color: rgba(253, 132, 253, 0.75);
+    font-family: 'Kanit', sans-serif;
+
+}
+.calculator-grid>button:hover{
+    transition: opacity  2s linear;
+    background-color: rgba(235, 184, 250, 0.9);
+    transition: background .1s linear, color .1s linear;
+}
+.span-two{
+    grid-column: span 2; 
+
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(255, 118, 244, 0.75); 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around; 
+    flex-direction: column;
+    padding: 10px; 
+    word-wrap: break-word;
+    word-break: break-all; 
+
+}
+.output .previous{
+    color: rgba(174, 189, 255, 0.75);
+    font-size: 1.5rem;
+    
+
+
+}
+.output .current-operand{
+    color: rgb(0, 72, 114);
+    font-size: 2.5rem;
+}
+.tooltip{
+    position: relative;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: auto;
+    background-color: linear-gradient(to top, #5cf4ff, #d37ae9);
+    color: rgb(41, 30, 53);
+    padding: 5px 0p;
+    border-radius: 6px;
+    right: 105%;
+    position: absolute;
+    z-index: 1; 
+    font-size: 1rem; 
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+.cupol{
+    animation-delay: 400ms;
+    margin-top: 60px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    color: rgb(69, 54, 82);
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
